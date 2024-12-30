@@ -4,6 +4,8 @@ This project is an extension of AI-projects 1 and 2. With the same ruleset of bo
 PREVIOUS RULESET REMINDER: 
 We generated a 30x30 grid with opened and closed cells. Each ship was generated so open cells were interconnected (that is, any open cell can be reached from any other open cell). We then placed a bot at a random open cell and a rat in a separate open cell. The goal of project 2 was to make the bot reach the rat. The bot had three actions it could take: scan cells, attempt ping, step. The bot does not have full information of the grid. 
 
+A more complete description of project 2 is in a PDF file labeled "Project 2 Instructions"
+
 
 **How you are representing your input data:**
 Our input data consists of two knowledge bases, the KB of the possible bot locations, and the KB of the rat location probabilities. Each knowledge base is a dxd matrix (in this case d=30) which represents the ship with open cells and closed cells. For the KB with the possible bot locations, a 0 represents a cell that is closed, a 1 represents a cell that is open but the bot cannot possibly be there, and 2 represents a cell in which the bot could be. For the KB with the rat location probabilities, each cell consists of a number between 0 and 1, which represents the probability that the rat is located in that cell. After any action the bot takes (cell sensing, pinging, or walking) we reshape the bot location and rat location probability knowledge bases into 1x900 vectors. We concatonate the flattened bot KB and the rat KB, respectively. This new 1x1800 vector is our input data.
