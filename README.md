@@ -1,6 +1,23 @@
 # Machine-Learning-Model-space-rats
 This project is an extension of AI-project 2. With the same ruleset of AI project 2, we created a machine learning model that, given a certain game state (with the knowledge bases of the rat probabilities and the bot possible locations), predicts how many actions are left for the bot to reach the rat. 
 
+**INSTRUCTIONS FOR PROJECT 3:**
+Project 3
+
+Final Project, due the 12th. I think this one should be relatively straightforward, I've trimmed it down based on the time you have left, etc.
+
+Roughly: I want you to build and train a neural network model, based on the principles we've discussed, to predict from the current state of the ship and knowledge base in project 2 the average number of moves&senses to catch the space rat, based on your bot in Project 2.
+
+That is, the input to your model should be (representation of knowledge base & ship), the output of your model should be a real number, representing the estimated number of moves until your bot catches the space rat.
+
+
+    Run simulations to collect data. Note, fix a good sensor value alpha for the duration, just be clear about what value you picked.
+    Load that data into a training data tensor for processing. You may want to save data to disk for easy access. (And look up how to read CSV files into pytorch tensors, for instance.)
+    Construct a model and training loop, similar to what we did in class.
+    Train and validate your model.
+    Some amount of evaluation and comparison, once you have a trained model, for data collection.
+
+
 PREVIOUS RULESET REMINDER: 
 We generated a 30x30 grid with opened and closed cells. Each ship was generated so open cells were interconnected (that is, any open cell can be reached from any other open cell). We then placed a bot at a random open cell and a rat in a separate open cell. The goal of project 2 was to make the bot reach the rat. The bot had three actions it could take: scan cells, attempt ping, step. The bot does not have full information of the grid. 
 
