@@ -1,5 +1,5 @@
 # Machine-Learning-Model-space-rats
-This project is an extension of AI-projects 1 and 2. With the same ruleset of both previous projects, we created a machine learning model that, given a board state, predicts how many actions the bot must take to reach the rat. 
+This project is an extension of AI-project 2. With the same ruleset of AI project 2, we created a machine learning model that, given a certain game state (with the knowledge bases of the rat probabilities and the bot possible locations), predicts how many actions are left for the bot to reach the rat. 
 
 PREVIOUS RULESET REMINDER: 
 We generated a 30x30 grid with opened and closed cells. Each ship was generated so open cells were interconnected (that is, any open cell can be reached from any other open cell). We then placed a bot at a random open cell and a rat in a separate open cell. The goal of project 2 was to make the bot reach the rat. The bot had three actions it could take: scan cells, attempt ping, step. The bot does not have full information of the grid. 
